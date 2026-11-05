@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toko Kharisma - Seragam Sekolah Kaliwedi Kidul</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#F2F4F7;--surf:#fff;--ink:#14213D;--mut:#5B6578;--line:#D9DEE7;--red:#C8312B;--yel:#F2B705;--hd:#14213D;--ok:#1E7F4F;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1524;--surf:#17203A;--ink:#EEF1F7;--mut:#9AA6BD;--line:#2A3556;--red:#E5524C;--hd:#0A1020;--ok:#4CC38A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1524;--surf:#17203A;--ink:#EEF1F7;--mut:#9AA6BD;--line:#2A3556;--red:#E5524C;--hd:#0A1020;--ok:#4CC38A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}
+header{background:var(--hd);color:#fff}
+.bar{max-width:1040px;margin:auto;padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:20px;letter-spacing:-.01em}
+.brand small{display:block;font-weight:500;font-size:12px;opacity:.75}
+nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav button{background:none;border:0;color:#fff;font:inherit;font-weight:500;padding:8px 12px;border-radius:8px;cursor:pointer}
+nav button.on{background:rgba(255,255,255,.16)}
+.tape{height:16px;background:var(--yel);background-image:repeating-linear-gradient(90deg,#14213D 0 1.5px,transparent 1.5px 10px),repeating-linear-gradient(90deg,#14213D 0 1.5px,transparent 1.5px 50px);background-size:100% 6px,100% 11px;background-repeat:repeat-x;background-position:0 0,0 0}
+main{max-width:1040px;margin:auto;padding:22px 16px 60px}
+h1{font-size:30px;line-height:1.15;margin:0 0 6px;letter-spacing:-.02em}
+h2{font-size:19px;margin:26px 0 10px}
+.mut{color:var(--mut)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.chip{border:1px solid var(--line);background:var(--surf);color:var(--ink);padding:6px 14px;border-radius:99px;font:inherit;cursor:pointer}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:16px}.ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--bg)}.th{width:64px;height:64px;object-fit:cover;border-radius:6px;display:block;margin-bottom:6px;background:var(--bg)}
+.price{font-weight:800;font-size:18px}
+.lv{align-self:flex-start;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;background:var(--yel);color:#14213D}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+input:focus-visible,select:focus-visible,button:focus-visible,textarea:focus-visible{outline:2px solid var(--red);outline-offset:1px}
+label{display:block;font-weight:500;font-size:13px;margin:10px 0 4px}
+.btn{background:var(--red);color:#fff;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer}
+.btn.alt{background:none;color:var(--ink);border:1px solid var(--line)}
+.btn.sm{padding:4px 10px;font-size:13px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+.row>*{flex:1 1 140px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.stat{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:14px}
+.stat b{display:block;font-size:24px;font-weight:800}
+.tw{overflow-x:auto;background:var(--surf);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-size:13px;color:var(--mut);font-weight:500}
+td input{width:64px;padding:4px 6px}
+.tag{font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;border:1px solid var(--line)}
+.panel{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:18px;max-width:560px}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--surf);color:var(--ink);width:min(520px,94vw);padding:20px}
+dialog::backdrop{background:rgba(10,16,32,.55)}
+.ln{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;gap:6px;align-items:center}
+.ok{color:var(--ok);font-weight:700}.bad{color:var(--red);font-weight:700}
+@media print{body>*:not(dialog){display:none}dialog{border:0;width:100%}dialog .row{display:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="bar">
+  <div class="brand">Toko Kharisma<small>Seragam sekolah, Desa Kaliwedi Kidul</small></div>
+  <nav id="nav"></nav>
+ </div>
+ <div class="tape" aria-hidden="true"></div>
+</header>
+<main id="app"></main>
+<dialog id="dlg"></dialog>
+<script>
+const UK=["S","M","L","XL"];
+const e=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const rp=n=>'Rp'+Number(n).toLocaleString('id-ID');
+const $=s=>document.querySelector(s);
+const st=()=>({S:10,M:12,L:8,XL:5});
+const seed=[["Kemeja Putih SD","SD",52000],["Rok Merah SD","SD",48000],["Celana Merah SD","SD",50000],["Kemeja Putih SMP","SMP",58000],["Rok Biru SMP","SMP",55000],["Celana Biru SMP","SMP",56000],["Kemeja Putih SMA","SMA",62000],["Rok Abu-abu SMA","SMA",60000],["Celana Abu-abu SMA","SMA",61000],["Seragam Pramuka","Umum",85000],["Seragam Olahraga","Umum",75000],["Dasi dan Topi","Umum",25000]].map((a,i)=>({id:i+1,nama:a[0],jenjang:a[1],harga:a[2],stok:st()}));
+let db=null;
+try{db=JSON.parse(localStorage.getItem('kh_db'))}catch(x){}
+if(!db||!db.produk)db={produk:seed,pesanan:[],seq:1,pid:13,sekolah:[],cfg:{rek:'',wa:''}};if(!db.sekolah)db.sekolah=[];if(!db.cfg)db.cfg={rek:'',wa:''};db.cfg.alamat=db.cfg.alamat||'';db.cfg.jam=db.cfg.jam||'';db.cfg.qris=db.cfg.qris||'';db.cfg.chartOn=!!db.cfg.chartOn;db.cfg.chartNote=db.cfg.chartNote||'';if(!db.chart)db.chart=[["S","7-8 th",38,52,50,56,60],["M","9-10 th",41,56,54,60,64],["L","11-12 th",44,60,58,64,68],["XL","13-14 th",47,64,62,68,72]];const CH=["Ukuran","Usia","Lebar dada","Panjang baju","Panjang lengan","Lingkar pinggang","Panjang bawahan"];
+const save=()=>{try{localStorage.setItem('kh_db',JSON.stringify(db))}catch(x){}};
+const S={v:'toko',f:'Semua',s:'',cart:[],admin:false,tab:'langsung',cek:null};
+const STATUS=["Baru","Diproses","Siap diambil","Selesai","Batal"];
+const prod=id=>db.produk.find(p=>p.id==id);
+const aktif=()=>db.pesanan.filter(o=>o.status!=='Batal');
+
+function go(v){S.v=v;render()}
+try{S.user=localStorage.getItem('kh_u')}catch(x){}
+if(!db.users)db.users=[];if(S.user&&!db.users.some(u=>u.wa==S.user))S.user=null;
+function hs(){if(location.hash=='#admin'){S.v='admin';render()}}
+addEventListener('hashchange',hs);hs();
+function render(){
+ const n=S.cart.reduce((a,c)=>a+c.qty,0);
+ $('#nav').innerHTML=`<button class="${S.v=='toko'?'on':''}" onclick="go('toko')">Belanja</button><button class="${S.v=='cek'?'on':''}" onclick="go('cek')">Cek pesanan</button>${S.admin||S.v=='admin'?`<button class="${S.v=='admin'?'on':''}" onclick="go('admin')">Admin</button>`:''}<button class="${S.v=='akun'?'on':''}" onclick="go('akun')">${S.user?'Akun saya':'Masuk / Daftar'}</button><button onclick="openCart()">Keranjang (${n})</button>`;
+ $('#app').innerHTML=S.v=='toko'?toko():S.v=='cek'?cek():S.v=='akun'?akun():admin();
+}
+
+/* ---------- Pelanggan ---------- */
+function toko(){
+ const L=["Semua","SD","SMP","SMA","Umum"];
+ const list=db.produk.filter(p=>(S.f=='Semua'||p.jenjang==S.f)&&(!S.s||!p.sekolah||p.sekolah==S.s));
+ return `<h1>Cek stok seragam sebelum mampir</h1><p class="mut">Lihat ukuran yang tersedia dari rumah, pesan dulu, lalu ambil di toko atau minta diantar.</p>${db.cfg.chartOn?'<button class="btn alt sm" onclick="chart()">Lihat panduan ukuran</button>':''}${db.cfg.alamat||db.cfg.jam?`<p style="font-weight:500">${db.cfg.alamat?'Lokasi: '+e(db.cfg.alamat):''}${db.cfg.alamat&&db.cfg.jam?'<br>':''}${db.cfg.jam?'Buka: '+e(db.cfg.jam):''}</p>`:''}
+ <div class="chips">${L.map(l=>`<button class="chip ${S.f==l?'on':''}" onclick="S.f='${l}';render()">${l}</button>`).join('')}</div>${db.sekolah.length?`<select aria-label="Sekolah" style="max-width:320px;margin-bottom:14px" onchange="S.s=this.value;render()"><option value="">Semua sekolah</option>${db.sekolah.map(s=>`<option ${S.s==s?'selected':''}>${e(s)}</option>`).join('')}</select>`:''}
+ <div class="grid">${list.map(p=>`<article class="card">${p.foto?`<img class="ph" src="${p.foto}" alt="${e(p.nama)}">`:''}<span class="lv">${e(p.jenjang)}${p.sekolah?' - '+e(p.sekolah):''}</span><h3>${e(p.nama)}</h3><div class="price">${rp(p.harga)}</div>
+ <select id="u${p.id}" aria-label="Ukuran ${e(p.nama)}">${UK.map(u=>`<option value="${u}" ${p.stok[u]<1?'disabled':''}>Ukuran ${u} ${p.stok[u]<1?'(habis)':'(sisa '+p.stok[u]+')'}</option>`).join('')}</select>
+ <button class="btn" onclick="addCart(${p.id})">Tambah ke keranjang</button></article>`).join('')||'<p class="mut">Belum ada produk di kategori ini.</p>'}</div>`;
+}
+function addCart(id){
+ const p=prod(id),u=$('#u'+id).value;
+ const c=S.cart.find(x=>x.pid==id&&x.uk==u);
+ const sudah=c?c.qty:0;
+ if(sudah+1>p.stok[u]){alert('Stok ukuran '+u+' tidak cukup.');return}
+ c?c.qty++:S.cart.push({pid:id,uk:u,qty:1});
+ render();
+}
+function openCart(){
+ const d=$('#dlg');
+ const tot=S.cart.reduce((a,c)=>a+c.qty*prod(c.pid).harga,0);
+ d.innerHTML=S.cart.length?`<h2 style="margin-top:0">Keranjang</h2>
+ ${S.cart.map((c,i)=>{const p=prod(c.pid);return `<div class="ln"><div>${e(p.nama)}<br><span class="mut">Ukuran ${c.uk}, ${rp(p.harga)}</span></div><div class="qty"><button class="btn alt sm" onclick="qty(${i},-1)">-</button>${c.qty}<button class="btn alt sm" onclick="qty(${i},1)">+</button></div></div>`}).join('')}
+ <p><b>Total: ${rp(tot)}</b></p>
+ <label for="cn">Nama pemesan</label><input id="cn" autocomplete="name" value="${e(S.user?U().nama:'')}">
+ <label for="cw">Nomor WhatsApp</label><input id="cw" inputmode="tel" autocomplete="tel" value="${e(S.user||'')}">
+ <label for="cb">Pembayaran</label><select id="cb"><option>Bayar tunai saat ambil</option><option>Transfer bank</option>${db.cfg.qris?'<option>QRIS</option>':''}</select><label for="cm">Pengambilan</label><select id="cm"><option>Ambil di toko</option><option>Diantar ke alamat</option></select>
+ <label for="cc">Alamat atau catatan</label><textarea id="cc" rows="2"></textarea>
+ <div class="row" style="margin-top:14px"><button class="btn alt" onclick="$('#dlg').close()">Tutup</button><button class="btn" onclick="checkout()">Kirim pesanan</button></div>`
+ :`<p>Keranjang masih kosong. Pilih seragam dulu di halaman Belanja.</p><button class="btn alt" onclick="$('#dlg').close()">Tutup</button>`;
+ if(!d.open)d.showModal();
+}
+function qty(i,d){
+ const c=S.cart[i],p=prod(c.pid);
+ if(d>0&&c.qty+1>p.stok[c.uk]){alert('Stok tidak cukup.');return}
+ c.qty+=d;if(c.qty<1)S.cart.splice(i,1);
+ render();openCart();
+}
+function buatPesanan(items,info,jenis,status){
+ for(const c of items){if(c.qty>prod(c.pid).stok[c.uk])return null}
+ items.forEach(c=>prod(c.pid).stok[c.uk]-=c.qty);
+ const o={id:'KH-'+String(db.seq++).padStart(4,'0'),tgl:new Date().toLocaleDateString('id-ID'),jenis,status,...info,
+  items:items.map(c=>({pid:c.pid,nama:prod(c.pid).nama,uk:c.uk,qty:c.qty,harga:prod(c.pid).harga}))};
+ o.total=o.items.reduce((a,c)=>a+c.qty*c.harga,0);o.dibayar=jenis=='Langsung'?o.total:0;o.bln=new Date().toISOString().slice(0,7);
+ db.pesanan.unshift(o);save();return o;
+}
+function checkout(){
+ const nama=$('#cn').value.trim(),wa=$('#cw').value.trim();
+ if(!nama||!/^[0-9+\-\s]{9,16}$/.test(wa)){alert('Isi nama dan nomor WhatsApp yang benar.');return}
+ const o=buatPesanan(S.cart,{nama,wa,akun:S.user||'',metode:$('#cm').value,bayar:$('#cb').value,catatan:$('#cc').value.trim()},'Online','Baru');
+ if(!o){alert('Stok berubah, ada item yang tidak cukup. Periksa keranjang.');return}
+ S.cart=[];render();
+ $('#dlg').innerHTML=`<h2 style="margin-top:0">Pesanan terkirim</h2><p>Nomor pesanan Anda: <b>${o.id}</b></p><p class="mut">Simpan nomor ini. Cek statusnya kapan saja di menu Cek pesanan. Total ${rp(o.total)}. ${o.bayar=='QRIS'?'Scan QR di bawah untuk membayar, lalu kabari toko.':o.bayar=='Transfer bank'&&db.cfg.rek?'Transfer ke '+e(db.cfg.rek)+', lalu kabari toko.':'Bayar saat pengambilan.'}</p>${o.bayar=='QRIS'&&db.cfg.qris?`<img src="${db.cfg.qris}" alt="QRIS Toko Kharisma" style="width:280px;max-width:100%;display:block;margin:0 auto 12px;border-radius:8px;background:#fff">`:''}${db.cfg.wa?`<p><a href="https://wa.me/${db.cfg.wa.replace(/\D/g,'').replace(/^0/,'62')}?text=${encodeURIComponent('Halo Toko Kharisma, saya sudah memesan '+o.id)}" target="_blank" rel="noopener">Kabari toko lewat WhatsApp</a></p>`:''}<button class="btn" onclick="$('#dlg').close()">Selesai</button>`;
+}
+function cek(){
+ const o=S.cek;
+ return `<h1>Cek status pesanan</h1><div class="panel"><label for="cq">Nomor pesanan</label><div class="row"><input id="cq" placeholder="KH-0001"><button class="btn" style="flex:0 0 auto" onclick="S.cek=db.pesanan.find(x=>x.id==$('#cq').value.trim().toUpperCase())||0;render()">Cari</button></div>
+ ${o===0?'<p class="bad">Nomor pesanan tidak ditemukan.</p>':o?`<h2>${o.id}, ${e(o.status)}</h2><p class="mut">${o.tgl}, atas nama ${e(o.nama||'pembeli')}</p>${o.items.map(i=>`<div class="ln"><span>${e(i.nama)} (${i.uk}) x${i.qty}</span><span>${rp(i.qty*i.harga)}</span></div>`).join('')}<p><b>Total ${rp(o.total)}</b><br><span class="mut">Dibayar ${rp(o.dibayar||0)}, sisa ${rp(o.total-(o.dibayar||0))}</span></p>`:''}</div>`;
+}
+
+/* ---------- Admin ---------- */
+function admin(){
+ if(!S.admin)return `<h1>Masuk admin</h1><div class="panel"><label for="ap">Kata sandi</label><input id="ap" type="password">${db.cfg.pw?'':'<p class="mut" style="font-size:13px">Kata sandi awal: kharisma123. Segera ganti di menu Pengaturan setelah masuk.</p>'}<button class="btn" onclick="masuk()">Masuk</button></div>`;
+ const T=[["ringkasan","Ringkasan"],["produk","Produk dan stok"],["pesanan","Pesanan"],["langsung","Penjualan langsung"],["laporan","Laporan"],["pelanggan","Pelanggan"],["ukuran","Panduan ukuran"],["atur","Pengaturan"]];
+ return `<div class="chips">${T.map(t=>`<button class="chip ${S.tab==t[0]?'on':''}" onclick="S.tab='${t[0]}';render()">${t[1]}</button>`).join('')}<button class="chip" onclick="S.admin=false;S.v='toko';render()">Keluar</button></div>`+({ringkasan:ringkasan,produk:produkAdm,pesanan:pesananAdm,langsung:langsung,laporan:laporan,pelanggan:pelangganAdm,ukuran:ukuranAdm,atur:atur}[S.tab])();
+}
+function ringkasan(){
+ const a=aktif(),om=a.reduce((x,o)=>x+o.total,0);
+ const agg={};a.forEach(o=>o.items.forEach(i=>{agg[i.nama]=agg[i.nama]||{q:0,r:0};agg[i.nama].q+=i.qty;agg[i.nama].r+=i.qty*i.harga}));
+ const top=Object.entries(agg).sort((x,y)=>y[1].q-x[1].q).slice(0,5);
+ const low=[];db.produk.forEach(p=>UK.forEach(u=>{if(p.stok[u]<=3)low.push(p.nama+' ('+u+'): sisa '+p.stok[u])}));
+ return `<div class="stats"><div class="stat">Omzet<b>${rp(om)}</b></div><div class="stat">Pesanan masuk<b>${a.length}</b></div><div class="stat">Perlu diproses<b>${db.pesanan.filter(o=>o.status=='Baru').length}</b></div><div class="stat">Belum dibayar<b>${rp(a.reduce((x,o)=>x+o.total-(o.dibayar||0),0))}</b></div></div>
+ <h2>Terlaris</h2><div class="tw"><table><tr><th>Produk</th><th>Terjual</th><th>Omzet</th></tr>${top.map(t=>`<tr><td>${e(t[0])}</td><td>${t[1].q}</td><td>${rp(t[1].r)}</td></tr>`).join('')||'<tr><td colspan="3" class="mut">Belum ada penjualan.</td></tr>'}</table></div>
+ <h2>Stok menipis</h2><div class="panel">${low.length?low.map(l=>`<div class="ln bad">${e(l)}</div>`).join(''):'<span class="ok">Semua stok aman.</span>'}</div>`;
+}
+function produkAdm(){
+ return `<div class="tw"><table><tr><th>Produk</th><th>Harga</th><th>Sekolah</th>${UK.map(u=>`<th>${u}</th>`).join('')}<th></th></tr>
+ ${db.produk.map(p=>`<tr><td>${p.foto?`<img class="th" src="${p.foto}" alt="">`:''}${e(p.nama)}<br><span class="mut">${e(p.jenjang)}</span><br><label class="btn alt sm" style="display:inline-block;margin:6px 4px 0 0;cursor:pointer">${p.foto?'Ganti foto':'Tambah foto'}<input type="file" accept="image/*" hidden onchange="upFoto(${p.id},this)"></label>${p.foto?`<button class="btn alt sm" style="margin-top:6px" onclick="prod(${p.id}).foto='';save();render()">Hapus foto</button>`:''}</td><td><input style="width:90px" type="number" min="0" value="${p.harga}" onchange="prod(${p.id}).harga=Math.max(0,+this.value);save()"></td><td><select style="min-width:120px" onchange="prod(${p.id}).sekolah=this.value;save();render()"><option value="">Semua</option>${db.sekolah.map(s=>`<option ${p.sekolah==s?'selected':''}>${e(s)}</option>`).join('')}</select></td>${UK.map(u=>`<td><input type="number" min="0" value="${p.stok[u]}" onchange="prod(${p.id}).stok['${u}']=Math.max(0,+this.value);save()"></td>`).join('')}<td><button class="btn alt sm" onclick="hapus(${p.id})">Hapus</button></td></tr>`).join('')}</table></div>
+ <h2>Tambah produk</h2><div class="panel"><label for="pn">Nama produk</label><input id="pn"><div class="row"><div><label for="pj">Jenjang</label><select id="pj"><option>SD</option><option>SMP</option><option>SMA</option><option>Umum</option></select></div><div><label for="pk">Sekolah</label><select id="pk"><option value="">Semua sekolah</option>${db.sekolah.map(s=>`<option>${e(s)}</option>`).join('')}</select></div><div><label for="ph">Harga</label><input id="ph" type="number" min="0"></div><div><label for="ps">Stok tiap ukuran</label><input id="ps" type="number" min="0" value="10"></div></div><button class="btn" style="margin-top:14px" onclick="tambah()">Simpan produk</button></div>`;
+}
+function tambah(){
+ const n=$('#pn').value.trim(),h=+$('#ph').value,s=Math.max(0,+$('#ps').value||0);
+ if(!n||h<=0){alert('Isi nama dan harga produk.');return}
+ const stok={};UK.forEach(u=>stok[u]=s);
+ db.produk.push({id:db.pid++,nama:n,jenjang:$('#pj').value,harga:h,stok,sekolah:$('#pk').value});save();render();
+}
+function hapus(id){if(confirm('Hapus produk ini?')){db.produk=db.produk.filter(p=>p.id!=id);save();render()}}
+function pesananAdm(){
+ return `<div class="tw"><table><tr><th>No</th><th>Pembeli</th><th>Pesanan</th><th>Total</th><th>Pembayaran</th><th>Status</th></tr>
+ ${db.pesanan.map(o=>`<tr><td>${o.id}<br><span class="mut">${o.tgl}, ${o.jenis}</span></td><td>${e(o.nama||'-')}<br><span class="mut">${e(o.wa||'')} ${e(o.metode||'')} ${e(o.bayar||'')}</span></td><td>${o.items.map(i=>`${e(i.nama)} (${i.uk}) x${i.qty}`).join('<br>')}${o.catatan?`<br><i class="mut">${e(o.catatan)}</i>`:''}</td><td>${rp(o.total)}</td><td>${rp(o.dibayar||0)}<br><span class="mut">${o.total-(o.dibayar||0)>0?'Sisa '+rp(o.total-(o.dibayar||0)):'Lunas'}</span><br><button class="btn alt sm" onclick="bayar('${o.id}')">Catat bayar</button> <button class="btn alt sm" onclick="nota('${o.id}')">Nota</button></td><td><select onchange="ubahStatus('${o.id}',this.value)" ${o.status=='Batal'?'disabled':''}>${STATUS.map(s=>`<option ${s==o.status?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('')||'<tr><td colspan="6" class="mut">Belum ada pesanan.</td></tr>'}</table></div>`;
+}
+function ubahStatus(id,s){
+ const o=db.pesanan.find(x=>x.id==id);
+ if(s=='Batal'){if(!confirm('Batalkan pesanan ini? Stok akan dikembalikan.')){render();return}o.items.forEach(i=>{const p=prod(i.pid);if(p)p.stok[i.uk]+=i.qty})}
+ o.status=s;save();render();
+}
+function langsung(){
+ return `<div class="panel"><p class="mut" style="margin-top:0">Catat pembelian yang dilakukan langsung di toko. Stok berkurang otomatis.</p>
+ <label for="lp">Produk</label><select id="lp">${db.produk.map(p=>`<option value="${p.id}">${e(p.nama)} (${rp(p.harga)})</option>`).join('')}</select>
+ <div class="row"><div><label for="lu">Ukuran</label><select id="lu">${UK.map(u=>`<option>${u}</option>`).join('')}</select></div><div><label for="lq">Jumlah</label><input id="lq" type="number" min="1" value="1"></div></div>
+ <label for="ln">Nama pembeli (boleh kosong)</label><input id="ln"><button class="btn" style="margin-top:14px" onclick="jual()">Catat penjualan</button><button class="btn alt" style="margin-top:14px;margin-left:8px" onclick="qr()">Tampilkan QRIS</button></div>`;
+}
+function bayar(id){const o=db.pesanan.find(x=>x.id==id),s=o.total-(o.dibayar||0);$('#dlg').innerHTML=`<h2 style="margin-top:0">Catat pembayaran ${o.id}</h2><p class="mut">Sisa tagihan ${rp(s)}</p>${s>0?`<label for="bj">Jumlah dibayar sekarang</label><input id="bj" type="number" min="1" max="${s}" value="${s}"><div class="row" style="margin-top:14px"><button class="btn alt" onclick="$('#dlg').close()">Batal</button><button class="btn" onclick="simpanBayar('${o.id}')">Simpan</button></div>`:`<p class="ok">Pesanan sudah lunas.</p><button class="btn alt" onclick="$('#dlg').close()">Tutup</button>`}`;$('#dlg').showModal()}
+function simpanBayar(id){const o=db.pesanan.find(x=>x.id==id),v=+$('#bj').value;if(v>0){o.dibayar=Math.min(o.total,(o.dibayar||0)+v);save();$('#dlg').close();render()}}
+function nota(id){const o=db.pesanan.find(x=>x.id==id);$('#dlg').innerHTML=`<h2 style="margin-top:0">Toko Kharisma</h2><p class="mut">Desa Kaliwedi Kidul<br>Nota ${o.id}, ${o.tgl}</p><p>${e(o.nama||'')}</p>${o.items.map(i=>`<div class="ln"><span>${e(i.nama)} (${i.uk}) x${i.qty}</span><span>${rp(i.qty*i.harga)}</span></div>`).join('')}<div class="ln"><b>Total</b><b>${rp(o.total)}</b></div><div class="ln"><span>Dibayar</span><span>${rp(o.dibayar||0)}</span></div><div class="ln"><span>Sisa</span><b>${rp(o.total-(o.dibayar||0))}</b></div><div class="row" style="margin-top:14px"><button class="btn alt" onclick="$('#dlg').close()">Tutup</button><button class="btn" onclick="window.print()">Cetak</button></div>`;$('#dlg').showModal()}
+function laporan(){const m={};const a=aktif();a.forEach(o=>{const k=o.bln||'Sebelumnya';m[k]=m[k]||{n:0,t:0,b:0};m[k].n++;m[k].t+=o.total;m[k].b+=o.dibayar||0});const pu=a.filter(o=>o.total>(o.dibayar||0));return `<h2 style="margin-top:0">Per bulan</h2><div class="tw"><table><tr><th>Bulan</th><th>Pesanan</th><th>Omzet</th><th>Terbayar</th><th>Belum dibayar</th></tr>${Object.entries(m).sort().reverse().map(([k,v])=>`<tr><td>${k}</td><td>${v.n}</td><td>${rp(v.t)}</td><td>${rp(v.b)}</td><td>${rp(v.t-v.b)}</td></tr>`).join('')||'<tr><td colspan="5" class="mut">Belum ada data.</td></tr>'}</table></div><h2>Pesanan belum lunas</h2><div class="tw"><table><tr><th>No</th><th>Pembeli</th><th>Sisa</th><th></th></tr>${pu.map(o=>`<tr><td>${o.id}</td><td>${e(o.nama||'-')}</td><td>${rp(o.total-(o.dibayar||0))}</td><td><button class="btn alt sm" onclick="bayar('${o.id}')">Catat bayar</button></td></tr>`).join('')||'<tr><td colspan="4" class="ok">Semua pesanan sudah lunas.</td></tr>'}</table></div>`}
+function atur(){return `<div class="panel"><h2 style="margin-top:0">Toko, kontak, dan rekening</h2><label for="cr">Rekening untuk transfer</label><input id="cr" value="${e(db.cfg.rek)}" placeholder="Contoh: BRI 1234567890 a.n. Toko Kharisma"><label for="cal">Lokasi toko</label><input id="cal" value="${e(db.cfg.alamat)}" placeholder="Contoh: Jl. Raya ..., Kaliwedi Kidul"><label for="cjm">Jam buka</label><input id="cjm" value="${e(db.cfg.jam)}" placeholder="Contoh: setiap hari 07.00-17.00"><label for="cwa">Nomor WhatsApp toko</label><input id="cwa" value="${e(db.cfg.wa)}" placeholder="08xxxxxxxxxx"><button class="btn" style="margin-top:12px" onclick="db.cfg.rek=$('#cr').value.trim();db.cfg.wa=$('#cwa').value.trim();db.cfg.alamat=$('#cal').value.trim();db.cfg.jam=$('#cjm').value.trim();save();alert('Tersimpan.')">Simpan</button></div><h2>Kata sandi admin</h2><div class="panel"><label for="pl" style="margin-top:0">Kata sandi lama</label><input id="pl" type="password" autocomplete="current-password"><label for="pb">Kata sandi baru (minimal 6 karakter)</label><input id="pb" type="password" autocomplete="new-password"><label for="pu">Ulangi kata sandi baru</label><input id="pu" type="password" autocomplete="new-password"><button class="btn" style="margin-top:12px" onclick="gantiPw()">Ganti kata sandi</button></div><h2>QRIS toko</h2><div class="panel"><p class="mut" style="margin-top:0">Unggah gambar QRIS toko dari aplikasi bank atau e-wallet. Pembeli melihatnya saat memilih bayar QRIS, dan Anda bisa menampilkannya di kasir.</p>${db.cfg.qris?`<img src="${db.cfg.qris}" alt="QRIS" style="width:200px;max-width:100%;display:block;margin-bottom:12px;background:#fff;border-radius:8px">`:''}<input id="qf" type="file" accept="image/*" onchange="upQ(this)">${db.cfg.qris?`<button class="btn alt sm" style="margin-top:10px" onclick="db.cfg.qris='';save();render()">Hapus QRIS</button>`:''}</div><h2>Daftar sekolah (opsional)</h2><div class="panel">${db.sekolah.map((s,i)=>`<div class="ln"><span>${e(s)}</span><button class="btn alt sm" onclick="db.sekolah.splice(${i},1);save();render()">Hapus</button></div>`).join('')||'<p class="mut" style="margin-top:0">Belum ada sekolah. Isi hanya jika ingin menandai seragam khusus sekolah tertentu, misalnya batik atau olahraga yang berbeda tiap sekolah. Boleh dikosongkan.</p>'}<div class="row" style="margin-top:12px"><input id="sn" placeholder="Nama sekolah"><button class="btn" style="flex:0 0 auto" onclick="const v=$('#sn').value.trim();if(v){db.sekolah.push(v);save();render()}">Tambah</button></div></div>`}
+function upQ(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,700/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);db.cfg.qris=c.toDataURL('image/png');save();render()};im.src=r.result};r.readAsDataURL(f)}
+function qr(){if(!db.cfg.qris){alert('Unggah QRIS dulu di menu Pengaturan.');return}$('#dlg').innerHTML=`<h2 style="margin-top:0">Bayar dengan QRIS</h2><img src="${db.cfg.qris}" alt="QRIS Toko Kharisma" style="width:300px;max-width:100%;display:block;margin:0 auto 14px;border-radius:8px;background:#fff"><button class="btn alt" onclick="$('#dlg').close()">Tutup</button>`;$('#dlg').showModal()}
+function upFoto(id,inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,600/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);const p=prod(id),lama=p.foto;p.foto=c.toDataURL('image/jpeg',0.75);try{localStorage.setItem('kh_db',JSON.stringify(db))}catch(x){p.foto=lama;alert('Penyimpanan penuh. Hapus foto lain atau pakai gambar yang lebih kecil.')}render()};im.src=r.result};r.readAsDataURL(f)}
+function chart(){$('#dlg').innerHTML=`<h2 style="margin-top:0">Panduan ukuran</h2><div class="tw"><table style="min-width:520px"><tr>${CH.map(h=>`<th>${h}</th>`).join('')}</tr>${db.chart.map(r=>`<tr><td><b>${e(r[0])}</b></td>${r.slice(1).map(v=>`<td>${e(v)}</td>`).join('')}</tr>`).join('')}</table></div><p class="mut">Semua ukuran dalam cm.${db.cfg.chartNote?' '+e(db.cfg.chartNote):''}</p><button class="btn alt" onclick="$('#dlg').close()">Tutup</button>`;$('#dlg').showModal()}
+function ukuranAdm(){return `<div class="panel" style="max-width:none"><label style="display:flex;gap:8px;align-items:center;margin-top:0"><input type="checkbox" style="width:auto" ${db.cfg.chartOn?'checked':''} onchange="db.cfg.chartOn=this.checked;save()"> Tampilkan panduan ukuran ke pelanggan</label><p class="mut" style="margin-bottom:0">Angka awal hanya contoh. Ganti dengan ukuran asli seragam di toko sebelum ditampilkan ke pelanggan. Satuan cm.</p></div><div class="tw" style="margin-top:12px"><table><tr>${CH.map(h=>`<th>${h}</th>`).join('')}</tr>${db.chart.map((r,i)=>`<tr>${r.map((v,j)=>`<td><input style="width:${j?88:60}px" aria-label="${CH[j]}" value="${e(v)}" onchange="db.chart[${i}][${j}]=this.value.trim();save()"></td>`).join('')}</tr>`).join('')}</table></div><div class="panel" style="margin-top:12px"><label for="cn2" style="margin-top:0">Catatan untuk pelanggan</label><input id="cn2" value="${e(db.cfg.chartNote)}" placeholder="Contoh: Selisih 1-2 cm, ukur badan dulu sebelum memilih" onchange="db.cfg.chartNote=this.value.trim();save()"></div>`}
+async function sha(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function masuk(){const h=await sha($('#ap').value);if(h==(db.cfg.pw||await sha('kharisma123'))){S.admin=true;render()}else alert('Kata sandi salah.')}
+async function gantiPw(){const l=await sha($('#pl').value),cur=db.cfg.pw||await sha('kharisma123'),b=$('#pb').value;if(l!=cur){alert('Kata sandi lama salah.');return}if(b.length<6){alert('Kata sandi baru minimal 6 karakter.');return}if(b!=$('#pu').value){alert('Ulangi kata sandi baru dengan sama persis.');return}db.cfg.pw=await sha(b);save();alert('Kata sandi berhasil diganti.');render()}
+const U=()=>db.users.find(u=>u.wa==S.user);
+const nw=s=>String(s).replace(/\D/g,'');
+const QS=["Nama hewan peliharaan pertama","Nama SD tempat Anda bersekolah","Nama kota tempat lahir"];
+function sesi(){try{S.user?localStorage.setItem('kh_u',S.user):localStorage.removeItem('kh_u')}catch(x){}}
+function akun(){const m=S.am||'masuk';
+if(S.user){const u=U(),my=db.pesanan.filter(o=>o.akun==u.wa);return `<h1>Halo, ${e(u.nama)}</h1><p class="mut">Nomor WhatsApp: ${e(u.wa)}</p><button class="btn alt" onclick="S.user=null;sesi();render()">Keluar dari akun</button><h2>Pesanan saya</h2>${my.length?`<div class="tw"><table><tr><th>No</th><th>Tanggal</th><th>Total</th><th>Dibayar</th><th>Status</th></tr>${my.map(o=>`<tr><td>${o.id}</td><td>${o.tgl}</td><td>${rp(o.total)}</td><td>${rp(o.dibayar||0)}</td><td>${e(o.status)}</td></tr>`).join('')}</table></div>`:'<p class="mut">Belum ada pesanan dari akun ini.</p>'}`}
+const tab=`<div class="chips"><button class="chip ${m=='masuk'?'on':''}" onclick="S.am='masuk';S.lw=null;render()">Masuk</button><button class="chip ${m=='daftar'?'on':''}" onclick="S.am='daftar';render()">Daftar</button><button class="chip ${m=='lupa'?'on':''}" onclick="S.am='lupa';S.lw=null;render()">Lupa kata sandi</button></div>`;
+let f='';
+if(m=='masuk')f=`<label for="lw" style="margin-top:0">Nomor WhatsApp</label><input id="lw" inputmode="tel" autocomplete="username"><label for="lp">Kata sandi</label><input id="lp" type="password" autocomplete="current-password"><button class="btn" style="margin-top:12px" onclick="masukU()">Masuk</button>`;
+else if(m=='daftar')f=`<label for="rn" style="margin-top:0">Nama</label><input id="rn" autocomplete="name"><label for="rw">Nomor WhatsApp</label><input id="rw" inputmode="tel" autocomplete="username"><label for="rp">Kata sandi (minimal 6 karakter)</label><input id="rp" type="password" autocomplete="new-password"><label for="rq">Pertanyaan keamanan (untuk lupa kata sandi)</label><select id="rq">${QS.map(q=>`<option>${q}</option>`).join('')}</select><label for="ra">Jawaban</label><input id="ra"><button class="btn" style="margin-top:12px" onclick="daftarU()">Buat akun</button>`;
+else if(!S.lw)f=`<label for="fw" style="margin-top:0">Nomor WhatsApp yang terdaftar</label><input id="fw" inputmode="tel"><button class="btn" style="margin-top:12px" onclick="cariU()">Lanjut</button>`;
+else f=`<p style="margin-top:0"><b>${e(db.users.find(x=>x.wa==S.lw).q)}</b></p><label for="fa">Jawaban Anda</label><input id="fa"><label for="fb">Kata sandi baru (minimal 6 karakter)</label><input id="fb" type="password" autocomplete="new-password"><button class="btn" style="margin-top:12px" onclick="resetU()">Ganti kata sandi</button>`;
+return `<h1>Akun pembeli</h1><p class="mut">Akun bersifat opsional. Tanpa akun pun Anda tetap bisa memesan. Dengan akun, nama dan nomor terisi otomatis dan Anda bisa melihat daftar pesanan sendiri.</p>${tab}<div class="panel">${f}</div>`}
+async function daftarU(){const nama=$('#rn').value.trim(),wa=nw($('#rw').value),pw=$('#rp').value,a=$('#ra').value.trim().toLowerCase();if(!nama||wa.length<9||wa.length>15){alert('Isi nama dan nomor WhatsApp yang benar.');return}if(pw.length<6){alert('Kata sandi minimal 6 karakter.');return}if(!a){alert('Isi jawaban pertanyaan keamanan.');return}if(db.users.some(u=>u.wa==wa)){alert('Nomor ini sudah terdaftar. Silakan masuk.');return}db.users.push({wa,nama,pw:await sha(pw),q:$('#rq').value,a:await sha(a)});save();S.user=wa;sesi();render()}
+async function masukU(){const u=db.users.find(x=>x.wa==nw($('#lw').value));if(!u||u.pw!=await sha($('#lp').value)){alert('Nomor atau kata sandi salah.');return}S.user=u.wa;sesi();render()}
+function cariU(){const w=nw($('#fw').value);if(!db.users.some(x=>x.wa==w)){alert('Nomor tidak terdaftar.');return}S.lw=w;render()}
+async function resetU(){const u=db.users.find(x=>x.wa==S.lw),b=$('#fb').value;if(u.a!=await sha($('#fa').value.trim().toLowerCase())){alert('Jawaban keamanan salah.');return}if(b.length<6){alert('Kata sandi baru minimal 6 karakter.');return}u.pw=await sha(b);save();S.lw=null;S.am='masuk';alert('Kata sandi diganti. Silakan masuk.');render()}
+function pelangganAdm(){return `<div class="tw"><table><tr><th>Nama</th><th>WhatsApp</th><th>Pesanan</th><th></th></tr>${db.users.map(u=>`<tr><td>${e(u.nama)}</td><td>${e(u.wa)}</td><td>${db.pesanan.filter(o=>o.akun==u.wa).length}</td><td><button class="btn alt sm" onclick="resetAdm('${u.wa}')">Reset sandi</button> <button class="btn alt sm" onclick="hapusU('${u.wa}')">Hapus</button></td></tr>`).join('')||'<tr><td colspan="4" class="mut">Belum ada pelanggan yang mendaftar.</td></tr>'}</table></div>`}
+async function resetAdm(wa){const t=String(crypto.getRandomValues(new Uint32Array(1))[0]%900000+100000),u=db.users.find(x=>x.wa==wa);u.pw=await sha(t);save();$('#dlg').innerHTML=`<h2 style="margin-top:0">Sandi sementara</h2><p>Pelanggan ${e(u.nama)} bisa masuk dengan sandi <b>${t}</b>. Beri tahu lewat WhatsApp.</p><button class="btn alt" onclick="$('#dlg').close()">Tutup</button>`;$('#dlg').showModal()}
+function hapusU(wa){if(confirm('Hapus akun pelanggan ini? Riwayat pesanan tetap tersimpan.')){db.users=db.users.filter(u=>u.wa!=wa);save();render()}}
+function jual(){
+ const q=Math.max(1,+$('#lq').value||1);
+ const o=buatPesanan([{pid:+$('#lp').value,uk:$('#lu').value,qty:q}],{nama:$('#ln').value.trim()||'Pembeli di toko'},'Langsung','Selesai');
+ if(!o){alert('Stok tidak cukup.');return}
+ alert('Tercatat: '+o.id+', total '+rp(o.total));S.tab='pesanan';render();
+}
+render();
+</script>
+</body>
+</html>
